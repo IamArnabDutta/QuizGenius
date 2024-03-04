@@ -1,0 +1,282 @@
+.app {
+    height: 100vh;
+    display: flex;
+    color: white;
+    background-color: #8a2be2;
+  }
+  .main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230), url("../src/assets/desktop-wallpaper-quiz-test-thumbnail.jpg") center;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .top{
+    height: 50%;
+    position: relative;
+
+  }
+  .bottom{
+    height: 50%;
+  }
+  .trivia {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .question{
+    width: 80%;
+    background: linear-gradient(#100241, black);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 20px;
+  }
+  .answers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+  .answer{
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(#0e0124, #22074d);
+    border: 1px solid white;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 10px 20px 10px;
+    cursor: pointer;
+
+  }
+  .answer:hover,
+.answer.active {
+  background: mediumblue;
+}
+
+.answer.correct {
+  animation: correct 1s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+.answer.wrong {
+  animation: wrong 1s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: crimson;
+  }
+}
+
+.endText {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: aquamarine;
+}
+
+  .timer{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .pyramid {
+    width: 25%;
+    background-color: #020230;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }  
+  .moneyList {
+    padding: 20px;
+    list-style: none;
+    width: 80%;
+    
+  }
+  
+  .moneyListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .moneyList.active {
+    background-color: aquamarine;
+    color: #00008B;
+    font-weight:bolder;
+    border-radius: 5px;
+    width:auto
+  
+  }
+  
+  .moneyListItemNumber {
+    width: 30%;
+    font-size: 18px;
+    font-weight: 100;
+    
+  }
+  
+  .moneyListItemAmount {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .start {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid  #FFBF00;
+    border-radius: 10px;
+    border-width: 2px;
+    
+    
+   
+  }
+  
+  .startInput {
+    width: 100%;
+    height: 30px;
+    border: none;
+    
+    text-align: center;
+    font-size: 18px;
+    color:#00008B ;
+    border-radius: 20px;
+    
+  }
+  
+  .startInput:focus {
+    outline: none;
+  }
+  
+  .startButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #00008B;
+  }
+
+  
+  .startButton:hover{
+    background-color: #00008B;
+    cursor: pointer;
+    color: white;
+  }
+  /* .begin {
+    width: 500px;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    bottom: auto; 
+    left: 22px;
+    right: 0;
+    margin: auto;
+    font-size: x-large;
+    color: #FFBF00;
+   
+  } */
+  
+  
+  /* Mobile */
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    background-size: auto;
+  }
+  .answer {
+    width: 100%;
+    margin: 0 5px 5px 5px;
+  }
+  .pyramid{
+    width: 40%;
+  }
+  .question{
+    padding: 0px;
+    
+    
+  }
+  .timer{
+    bottom: 70px;
+    left: 50px;
+    
+  }
+  .start{
+    margin-left:auto;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    background-size: cover;
+    background-position: center;
+    background-size: auto;
+  }
+}
+
